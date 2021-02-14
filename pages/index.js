@@ -2,6 +2,7 @@
 function Home(){
     return(
         <div>
+            Menu<br />
             <h1>Home</h1>
         </div>
     )
