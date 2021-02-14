@@ -1,7 +1,9 @@
+import Menu from '../components/Menu';
+
 function Contato(){
     return(
         <div>
-            Menu <br />
+            <Menu />
             Contato
         </div>
     )

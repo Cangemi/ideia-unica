@@ -1,8 +1,11 @@
+
+import Menu from '../components/Menu';
+
 function Sobre(){
     return(
         
         <div>
-            Menu <br />
+            <Menu />
             Sobre a Empresa
         </div>
     )
