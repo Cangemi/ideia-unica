@@ -25,3 +25,5 @@ export const MenuItems = [
         cName: 'nav-links-mobile'
     }
 ]
+
+export default MenuItems
