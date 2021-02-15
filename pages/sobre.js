@@ -1,11 +1,12 @@
 
-import Menu from '../components/Menu';
+import Navbar from '../components/Navbar';
+
 
 function Sobre(){
     return(
         
         <div>
-            <Menu />
+            <Navbar />
             Sobre a Empresa
         </div>
     )
