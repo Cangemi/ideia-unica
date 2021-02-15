@@ -8,11 +8,7 @@ import {
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+    Container
 } from 'reactstrap';
 
 const Menu = () => {
@@ -23,6 +19,7 @@ const Menu = () => {
     return (
         <div>
             <Navbar color="dark" dark expand="md">
+                <Container>
                 <NavbarBrand href="/">Cangemi</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
@@ -40,6 +37,7 @@ const Menu = () => {
                         </NavItem>
                     </Nav>
                 </Collapse>
+                </Container>
             </Navbar>
         </div>
     );
