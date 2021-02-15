@@ -1,10 +1,10 @@
-import Navbar from '../components/Navbar';
+import Menu from '../components/Menu';
 
 
 function Contato(){
     return(
         <div>
-            <Navbar />
+            <Menu />
             Contato
         </div>
     )
