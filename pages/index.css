@@ -5,4 +5,18 @@
     padding-bottom: 80px;
     color: #fff;
     background-color: black;
+    margin-bottom: 0rem;
+}
+
+.circulo{
+    width: 140px;
+    height: 140px;
+    background-color: #fed136;
+    font-size: 52px;
+    padding-top: 24px;
+}
+
+.centralizar{
+    margin: 0 auto !important;
+    float: none !important;
 }
