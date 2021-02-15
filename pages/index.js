@@ -6,6 +6,12 @@ import { Jumbotron, Container } from 'reactstrap'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {fas} from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
+
 
 
 function Home() {
@@ -27,7 +33,7 @@ function Home() {
                     <div class="row">
                         <div class="col-lg-4">
                             <div className="rounded-circle circulo centralizar">
-                                A
+                                <FontAwesomeIcon icon='dolly'/>
                             </div>
 
                             <h2 className="mt-4 mb-4">Serviço 1</h2>
@@ -36,7 +42,7 @@ function Home() {
                         </div>
                         <div class="col-lg-4">
                            <div className="rounded-circle circulo centralizar">
-                                B
+                                <FontAwesomeIcon icon='project-diagram'/>
                             </div>
 
                             <h2 className="mt-4 mb-4">Serviço 2</h2>
@@ -45,7 +51,7 @@ function Home() {
                         </div>
                         <div class="col-lg-4">
                             <div className="rounded-circle circulo centralizar">
-                                C
+                                <FontAwesomeIcon icon='dolly-flatbed'/>
                             </div>
                             <h2 className="mt-4 mb-4">Serviço 3</h2>
                             <p>And lastly this, the third column of representative placeholder content.</p>
