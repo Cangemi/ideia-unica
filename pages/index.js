@@ -18,6 +18,7 @@ function Home(){
             </Head>
             <Menu />
             <Jumbotron fluid className="servicos">
+                <style>{'.servicos{background-color: #000}'}</style>
                 <Container className="text-center">
                     <h1 className='display-4'>Serviços da Empresa</h1>
                     <p className='lead'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
