@@ -1,6 +1,11 @@
 import Head from 'next/head'
+
 import Menu from '../components/Menu';
+
+import {Jumbotron, Container} from 'reactstrap'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function Home(){
@@ -12,7 +17,12 @@ function Home(){
                 <meta name='author' content='Pedro Cangemi'/>
             </Head>
             <Menu />
-            Home
+            <Jumbotron fluid className="servicos">
+                <Container className="text-center">
+                    <h1 className='display-4'>Serviços da Empresa</h1>
+                    <p className='lead'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </Container>
+            </Jumbotron>
             
         </div>
     )
