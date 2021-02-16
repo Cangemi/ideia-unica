@@ -14,6 +14,8 @@ library.add(fas);
 
 
 
+
+
 function Home() {
     return (
         <div>
@@ -24,7 +26,7 @@ function Home() {
             </Head>
             <Menu />
             <Jumbotron fluid className="servicos-gerais" id="servicos">
-
+                
                 <Container className="text-center">
                     <div>
                         <h1 className='display-4'>Serviços da Empresa</h1>
@@ -56,6 +58,7 @@ function Home() {
                             <h2 className="mt-4 mb-4">Serviço 3</h2>
                             <p>And lastly this, the third column of representative placeholder content.</p>
                         </div>
+                        
                     </div>
                 </Container>
             </Jumbotron>
