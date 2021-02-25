@@ -1,3 +1,5 @@
+import React from 'react';
+import axios from 'axios';
 import Head from 'next/head'
 
 import Menu from '../components/Menu';
@@ -16,8 +18,7 @@ library.add(fas);
 
 
 
-function Home() {
-    return (
+const Home = (data) =>(
         <div>
             <Head>
                 <title>Home - Cangemi</title>
@@ -29,34 +30,34 @@ function Home() {
                 
                 <Container className="text-center">
                     <div>
-                        <h1 className='display-4'>Serviços da Empresa</h1>
-                        <p className='lead pb-4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h1 className='display-4'>{data.response.titulo}</h1>
+                        <p className='lead pb-4'>{data.response.subtitulo}</p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4">
+                    <div className="row">
+                        <div className="col-lg-4">
                             <div className="rounded-circle circulo centralizar">
-                                <FontAwesomeIcon icon='dolly'/>
+                                <FontAwesomeIcon icon={data.response.servUmIcone}/>
                             </div>
 
-                            <h2 className="mt-4 mb-4">Serviço 1</h2>
-                            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                            <h2 className="mt-4 mb-4">{data.response.servUmTitulo}</h2>
+                            <p>{data.response.servUmDescricao}</p>
 
                         </div>
-                        <div class="col-lg-4">
+                        <div className="col-lg-4">
                            <div className="rounded-circle circulo centralizar">
-                                <FontAwesomeIcon icon='project-diagram'/>
+                                <FontAwesomeIcon icon={data.response.servDoisIcone}/>
                             </div>
 
-                            <h2 className="mt-4 mb-4">Serviço 2</h2>
-                            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                            <h2 className="mt-4 mb-4">{data.response.servDoisTitulo}</h2>
+                            <p>{data.response.servDoisDescricao}</p>
 
                         </div>
-                        <div class="col-lg-4">
+                        <div className="col-lg-4">
                             <div className="rounded-circle circulo centralizar">
-                                <FontAwesomeIcon icon='dolly-flatbed'/>
+                                <FontAwesomeIcon icon={data.response.servTresIcone}/>
                             </div>
-                            <h2 className="mt-4 mb-4">Serviço 3</h2>
-                            <p>And lastly this, the third column of representative placeholder content.</p>
+                            <h2 className="mt-4 mb-4">{data.response.servTresTitulo}</h2>
+                            <p>{data.response.servTresDescricao}</p>
                         </div>
                         
                     </div>
@@ -64,7 +65,12 @@ function Home() {
             </Jumbotron>
 
         </div>
-    )
-}
+    );
+
+    Home.getInitialProps = async ()=>{
+      var response = await axios.get('http://localhost:8080/home');
+   // console.log(response.data);
+      return {response: response.data}
+    }
 
 export default Home
