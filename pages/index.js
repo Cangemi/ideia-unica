@@ -68,7 +68,7 @@ const Home = (data) =>(
     );
 
     Home.getInitialProps = async ()=>{
-      var response = await axios.get('http://localhost:8080/home');
+      var response = await axios.get('https://ideia-unica-api.vercel.app/home');
    // console.log(response.data);
       return {response: response.data}
     }
